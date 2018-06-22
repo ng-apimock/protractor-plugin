@@ -1,2 +1,2 @@
-# protractor-client
-protractor client for ng-apimock
+# ng-apimock/protractor-client 
+Protractor client for ng-apimock. 

@@ -1,0 +1,54 @@
+{
+  "name": "@ng-apimock/protractor-client",
+  "description": "Protractor client for ng-apimock",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ng-apimock/protractor-client#readme",
+  "author": {
+    "name": "Mischa Dasberg",
+    "email": "mischa@dasberg.nl"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "precompile": "rm -rf dist",
+    "compile": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jasmine-ts \"src/**/*.spec.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ng-apimock/protractor-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ng-apimock/protractor-client/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ng-apimock/protractor-client/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "apimock",
+    "ng-apimock",
+    "http",
+    "api",
+    "protractor"
+  ],
+  "devDependencies": {
+    "@types/jasmine": "2.8.8",
+    "@types/sinon": "5.0.1",
+    "jasmine-ts": "0.2.1",
+    "protractor": "5.3.2",
+    "sinon": "6.0.0",
+    "tslint": "5.10.0",
+    "tslint-eslint-rules": "5.3.1",
+    "typescript": "2.9.2",
+    "vrsource-tslint-rules": "5.8.2"
+  },
+  "dependencies": {
+    "@ng-apimock/base-client": "1.0.1"
+  },
+  "peerDependencies": {
+    "protractor": "5.x"
+  }
+}
