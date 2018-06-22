@@ -1,12 +1,12 @@
 import * as sinon from 'sinon';
-import ProtractorClient from './protractor.client';
+import ProtractorPlugin from './protractor.plugin';
 
-describe('ProtractorClient', () => {
+describe('ProtractorPlugin', () => {
     const BASE_URL = 'http://localhost:9000';
     let browserGetFn: sinon.SinonStub;
     let browserGetProcessedConfigThenFn: any;
     let browserManageAddCookieFn: sinon.SinonStub;
-    let client: ProtractorClient;
+    let plugin: ProtractorPlugin;
     let deferredPromise: any;
     let resolveFn: sinon.SinonStub;
     let rejectFn: sinon.SinonStub;
@@ -40,23 +40,23 @@ describe('ProtractorClient', () => {
         rejectFn = sinon.stub();
         resolveFn = sinon.stub();
 
-        client = new ProtractorClient();
+        plugin = new ProtractorPlugin();
     });
 
     describe('constructor', () => {
         it('sets the baseUrl', () =>
-            expect(client.baseUrl).toBe(`${BASE_URL}/ngapimock`));
+            expect(plugin.baseUrl).toBe(`${BASE_URL}/ngapimock`));
     });
 
     describe('openUrl', () =>
         it('opens the url', async () => {
-            await client.openUrl('url');
+            await plugin.openUrl('url');
             sinon.assert.calledWith(browserGetFn, 'url');
         }));
 
     describe('setCookie', () =>
         it('sets the cookie', async () => {
-            await client.setCookie('name', 'value');
+            await plugin.setCookie('name', 'value');
             sinon.assert.calledWith(browserManageAddCookieFn, {name: 'name', value: 'value'});
         }));
 });
