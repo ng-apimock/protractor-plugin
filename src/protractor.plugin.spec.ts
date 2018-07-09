@@ -48,6 +48,13 @@ describe('ProtractorPlugin', () => {
             expect(plugin.baseUrl).toBe(`${BASE_URL}/ngapimock`));
     });
 
+    describe('constructor custom Url', () => {
+        it('sets the baseUrl', () => {
+            plugin = new ProtractorPlugin('http://newUrl:3000');
+            expect(plugin.baseUrl).toBe(`http://newUrl:3000/ngapimock`);
+        });
+    });
+
     describe('openUrl', () =>
         it('opens the url', async () => {
             await plugin.openUrl('url');
