@@ -1,6 +1,6 @@
 import ProtractorPlugin from './protractor.plugin';
 
-let client: ProtractorPlugin;
+let plugin: ProtractorPlugin;
 
 /**
  * On prepare.
@@ -8,7 +8,7 @@ let client: ProtractorPlugin;
  */
 async function onPrepare() {
     const globalName = this.config.options.globalName || 'ngApimock';
-    (global as any)[globalName] = client;
+    (global as any)[globalName] = plugin;
 }
 
 /**
@@ -16,8 +16,8 @@ async function onPrepare() {
  * @return {Promise<void>} promise The promise.
  */
 async function setup() {
-    client = new ProtractorPlugin();
-    await client.setNgApimockCookie();
+    plugin = new ProtractorPlugin();
+    await plugin.setNgApimockCookie();
 }
 
 exports.onPrepare = onPrepare;

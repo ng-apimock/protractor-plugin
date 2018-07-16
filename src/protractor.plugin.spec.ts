@@ -20,9 +20,6 @@ describe('ProtractorPlugin', () => {
         (global as any)['protractor'] = {
             browser: {
                 baseUrl: BASE_URL,
-                getProcessedConfig: () => ({
-                    then: browserGetProcessedConfigThenFn
-                }),
                 driver: {
                     get: browserGetFn
                 },
@@ -30,11 +27,6 @@ describe('ProtractorPlugin', () => {
                     addCookie: browserManageAddCookieFn
                 })
             },
-            promise: {
-                defer: () => ({
-                    promise: deferredPromise
-                })
-            }
         };
 
         rejectFn = sinon.stub();
