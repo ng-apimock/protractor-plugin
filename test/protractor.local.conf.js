@@ -3,8 +3,8 @@ let server;
 
 config.multiCapabilities = [{
     browserName: 'chrome',
-    maxInstances: 1,
-    shardTestFiles: false,
+    maxInstances: 5,
+    shardTestFiles: true,
     chromeOptions: {
         args: ['--no-sandbox', '--test-type=browser'],
         prefs: {
