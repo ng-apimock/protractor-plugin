@@ -13,7 +13,8 @@
     "compile": "tsc",
     "lint": "tslint -p tsconfig.json",
     "test": "jasmine-ts \"src/**/*.spec.ts\"",
-    "protractor-local": "protractor test/protractor.local.conf.js"
+    "protractor-local": "protractor test/protractor.local.conf.js",
+    "protractor-ci": "protractor test/protractor.ci.conf.js"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "jasmine-ts": "0.2.1",
     "protractor": "5.3.2",
     "protractor-cucumber-framework": "6.0.0",
+    "sauce-connect-launcher": "1.2.4",
     "serve-static": "1.13.2",
     "sinon": "6.1.3",
     "tslint": "5.11.0",

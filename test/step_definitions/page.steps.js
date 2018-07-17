@@ -1,5 +1,8 @@
 (() => {
-    const {Before, Given, When, Then} = require('cucumber');
+    const {Before, Given, When, Then, setDefaultTimeout} = require('cucumber');
+
+    setDefaultTimeout(60 * 1000);
+
     const page = new (require('../pos/page.po'))();
     const fs = require('fs-extra');
     const path = require('path');
