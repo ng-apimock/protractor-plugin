@@ -4,8 +4,8 @@ import BaseClient from '@ng-apimock/base-client';
 /** Protractor plugin for ng-apimock. */
 class ProtractorPlugin extends BaseClient {
     /** Constructor.*/
-    constructor() {
-        super(browser.baseUrl);
+    constructor(baseUrl?: string) {
+        super(baseUrl || browser.baseUrl);
     }
 
     /** {@inheritDoc}. */

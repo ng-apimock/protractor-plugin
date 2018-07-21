@@ -16,7 +16,7 @@ async function onPrepare() {
  * @return {Promise<void>} promise The promise.
  */
 async function setup() {
-    plugin = new ProtractorPlugin();
+    plugin = new ProtractorPlugin(this.config.options.baseUrl);
     await plugin.setNgApimockCookie();
 }
 
