@@ -6,7 +6,7 @@
     const page = new (require('../pos/page.po'))();
     const fs = require('fs-extra');
     const path = require('path');
-    const mocksDirectory = path.join(process.cwd(), 'test', 'mocks');
+    const mocksDirectory = path.join(require.resolve('@ng-apimock/test-application'), '..', '..', 'mocks');
 
     let responses;
 
@@ -48,7 +48,7 @@
         await browser.wait(() => {
             if (fs.existsSync(browser.params.default_directory + '/test.pdf')) {
                 const actual = fs.readFileSync(browser.params.default_directory + '/test.pdf');
-                const expected = fs.readFileSync(path.join(__dirname, '..', responses.getItems[scenario].file));
+                const expected = fs.readFileSync(path.join(require.resolve('@ng-apimock/test-application'), '..', '..', responses.getItems[scenario].file));
                 return actual.equals(expected);
             } else {
                 return browser.params.environment === 'CI'

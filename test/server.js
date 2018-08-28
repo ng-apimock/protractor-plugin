@@ -4,7 +4,7 @@ const path = require('path');
 const serveStatic = require('serve-static');
 const app = connect();
 
-apimock.processor.process({src: path.join(__dirname, 'mocks')});
+apimock.processor.process({src: path.join(require.resolve('@ng-apimock/test-application'), '..', '..', 'mocks')});
 app.use(apimock.middleware);
 app.use('/', serveStatic(path.join(require.resolve('@ng-apimock/test-application'), '..')));
 app.use('/items', function (request, response, next) {
