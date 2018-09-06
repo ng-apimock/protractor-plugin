@@ -48,7 +48,7 @@
         await browser.wait(() => {
             if (fs.existsSync(browser.params.default_directory + '/test.pdf')) {
                 const actual = fs.readFileSync(browser.params.default_directory + '/test.pdf');
-                const expected = fs.readFileSync(path.join(require.resolve('@ng-apimock/test-application'), '..', '..', responses.getItems[scenario].file));
+                const expected = fs.readFileSync(path.join(mocksDirectory, responses.getItems[scenario].file));
                 return actual.equals(expected);
             } else {
                 return browser.params.environment === 'CI'

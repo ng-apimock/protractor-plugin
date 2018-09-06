@@ -2,7 +2,6 @@ import * as sinon from 'sinon';
 import ProtractorPlugin from './protractor.plugin';
 
 describe('ProtractorPlugin', () => {
-    const BASE_URL = 'http://localhost:9000';
     let browserGetFn: sinon.SinonStub;
     let browserGetProcessedConfigThenFn: any;
     let browserManageAddCookieFn: sinon.SinonStub;
@@ -19,7 +18,7 @@ describe('ProtractorPlugin', () => {
 
         (global as any)['protractor'] = {
             browser: {
-                baseUrl: BASE_URL,
+                baseUrl: 'http://localhost:9000',
                 driver: {
                     get: browserGetFn
                 },
@@ -37,7 +36,7 @@ describe('ProtractorPlugin', () => {
 
     describe('constructor', () => {
         it('sets the baseUrl', () =>
-            expect(plugin.baseUrl).toBe(`${BASE_URL}/ngapimock`));
+            expect(plugin.baseUrl).toBe(`${'http://localhost:9000'}/ngapimock`));
     });
 
     describe('constructor custom Url', () => {
