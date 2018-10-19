@@ -7,7 +7,10 @@ let plugin: ProtractorPlugin;
  * @return {Promise<void>} promise The promise.
  */
 async function onPrepare() {
-    const globalName = this.config.options.globalName || 'ngApimock';
+    const globalName = (this.config.options && this.config.options.globalName)
+        ? this.config.options.globalName
+        : 'ngApimock';
+
     (global as any)[globalName] = plugin;
 }
 
@@ -16,7 +19,11 @@ async function onPrepare() {
  * @return {Promise<void>} promise The promise.
  */
 async function setup() {
-    plugin = new ProtractorPlugin(this.config.options.baseUrl);
+    const baseUrl = (this.config.options && this.config.options.baseUrl)
+        ? this.config.options.baseUrl
+        : undefined;
+
+    plugin = new ProtractorPlugin(baseUrl);
     await plugin.setNgApimockCookie();
 }
 
