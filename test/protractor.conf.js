@@ -1,5 +1,6 @@
 const path = require('path');
 let server;
+
 exports.config = {
     allScriptsTimeout: 5000,
     baseUrl: 'http://localhost:9900/',
@@ -7,7 +8,7 @@ exports.config = {
         default_directory: '/tmp'
     },
     specs: [
-        'features/*.feature'
+        path.join(__dirname, 'features', '**', '*.feature')
     ],
     plugins: [{
         path: path.join(process.cwd(), 'dist', 'index.js'),
@@ -25,11 +26,13 @@ exports.config = {
     },
 
     onPrepare: async () => {
+        require('ts-node').register({
+            project: path.join(process.cwd(), 'test', 'tsconfig.e2e.json')
+        });
+
         const chai = require('chai');
         global.chai = chai;
         global.expect = chai.expect;
-        await browser.getProcessedConfig().then(async () =>
-            await browser.driver.manage().window().maximize());
     },
     afterLaunch: () => {
         server.kill();
@@ -38,7 +41,10 @@ exports.config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
-        require: './step_definitions/*.steps.js',
-        format: 'summary'
+        require: [
+            path.join(__dirname, 'step_definitions', '*.steps.ts'),
+            path.join(__dirname, 'cucumber.helper.ts')
+        ],
+        format: ['summary']
     }
 };
