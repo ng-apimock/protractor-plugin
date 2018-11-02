@@ -52,3 +52,6 @@ Resets all the mocks to the default state.
 
 ##### setMocksToPassThrough(): Promise<any>;
 Sets all the mocks to pass through.
+
+##### setPreset(name: string): Promise<any>;
+Sets the mocks and variables in the selected state.
