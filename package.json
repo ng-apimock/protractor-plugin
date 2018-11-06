@@ -41,7 +41,6 @@
     "angularjs"
   ],
   "devDependencies": {
-    "@ng-apimock/base-client": "1.0.6",
     "@ng-apimock/core": "1.0.11",
     "@ng-apimock/test-application": "1.0.9",
     "@types/chai": "4.1.7",
@@ -66,7 +65,9 @@
     "typescript": "3.1.5",
     "vrsource-tslint-rules": "5.8.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@ng-apimock/base-client": "1.0.6"
+  },
   "peerDependencies": {
     "protractor": "5.x"
   }
