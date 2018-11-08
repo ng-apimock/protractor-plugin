@@ -1,4 +1,5 @@
 import ProtractorPlugin from './protractor.plugin';
+import {Client} from '@ng-apimock/base-client';
 
 let plugin: ProtractorPlugin;
 
@@ -29,3 +30,5 @@ async function setup() {
 
 exports.onPrepare = onPrepare;
 exports.setup = setup;
+
+export {Client};

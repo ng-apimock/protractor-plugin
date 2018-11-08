@@ -2,9 +2,9 @@ import {After, Given, When} from 'cucumber';
 import {expect} from 'chai';
 import {browser} from 'protractor';
 
-import {NgApimock} from '../ng-apimock';
+import {Client} from '@ng-apimock/base-client';
 
-declare const client: NgApimock;
+declare const client: Client;
 
 Given(/^the following mocks state:$/, checkMocksState);
 Given(/^the following variables state:$/, checkVariablesState);
