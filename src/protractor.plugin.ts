@@ -1,5 +1,5 @@
 import {browser} from 'protractor';
-import BaseClient from '@ng-apimock/base-client';
+import {BaseClient} from '@ng-apimock/base-client';
 
 /** Protractor plugin for ng-apimock. */
 class ProtractorPlugin extends BaseClient {

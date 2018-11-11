@@ -1,19 +1,19 @@
-import * as sinon from 'sinon';
+import {assert, SinonStub, stub} from 'sinon';
 import ProtractorPlugin from './protractor.plugin';
 
 describe('ProtractorPlugin', () => {
-    let browserGetFn: sinon.SinonStub;
+    let browserGetFn: SinonStub;
     let browserGetProcessedConfigThenFn: any;
-    let browserManageAddCookieFn: sinon.SinonStub;
+    let browserManageAddCookieFn: SinonStub;
     let plugin: ProtractorPlugin;
     let deferredPromise: any;
-    let resolveFn: sinon.SinonStub;
-    let rejectFn: sinon.SinonStub;
+    let resolveFn: SinonStub;
+    let rejectFn: SinonStub;
 
     beforeAll(() => {
-        browserGetProcessedConfigThenFn = sinon.stub();
-        browserGetFn = sinon.stub();
-        browserManageAddCookieFn = sinon.stub();
+        browserGetProcessedConfigThenFn = stub();
+        browserGetFn = stub();
+        browserManageAddCookieFn = stub();
         deferredPromise = {};
 
         (global as any)['protractor'] = {
@@ -28,8 +28,8 @@ describe('ProtractorPlugin', () => {
             },
         };
 
-        rejectFn = sinon.stub();
-        resolveFn = sinon.stub();
+        rejectFn = stub();
+        resolveFn = stub();
 
         plugin = new ProtractorPlugin();
     });
@@ -49,12 +49,12 @@ describe('ProtractorPlugin', () => {
     describe('openUrl', () =>
         it('opens the url', async () => {
             await plugin.openUrl('url');
-            sinon.assert.calledWith(browserGetFn, 'url');
+            assert.calledWith(browserGetFn, 'url');
         }));
 
     describe('setCookie', () =>
         it('sets the cookie', async () => {
             await plugin.setCookie('name', 'value');
-            sinon.assert.calledWith(browserManageAddCookieFn, {name: 'name', value: 'value'});
+            assert.calledWith(browserManageAddCookieFn, { name: 'name', value: 'value' });
         }));
 });
