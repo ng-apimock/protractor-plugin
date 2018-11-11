@@ -4,9 +4,9 @@ Feature: Update mock state
   Developers must be able to:
 
   - Update mock state
-    - select scenario
-    - echo request
-    - delay response
+  - select scenario
+  - echo request
+  - delay response
 
   in order to run the application against mocks.
 

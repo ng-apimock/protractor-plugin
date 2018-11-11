@@ -1,7 +1,7 @@
 {
   "name": "@ng-apimock/protractor-plugin",
   "description": "Protractor plugin for ng-apimock",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "homepage": "https://github.com/ng-apimock/protractor-plugin#readme",
   "author": {
     "name": "Mischa Dasberg",
@@ -41,7 +41,7 @@
     "angularjs"
   ],
   "devDependencies": {
-    "@ng-apimock/core": "1.0.12",
+    "@ng-apimock/core": "1.0.13",
     "@ng-apimock/test-application": "1.0.9",
     "@types/chai": "4.1.7",
     "@types/cucumber": "4.0.4",
@@ -66,7 +66,7 @@
     "vrsource-tslint-rules": "5.8.2"
   },
   "dependencies": {
-    "@ng-apimock/base-client": "1.0.7"
+    "@ng-apimock/base-client": "1.0.8"
   },
   "peerDependencies": {
     "protractor": "5.x"
