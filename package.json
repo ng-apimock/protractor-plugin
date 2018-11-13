@@ -66,7 +66,7 @@
     "vrsource-tslint-rules": "5.8.2"
   },
   "dependencies": {
-    "@ng-apimock/base-client": "1.0.9"
+    "@ng-apimock/base-client": "1.0.10"
   },
   "peerDependencies": {
     "protractor": "5.x"
