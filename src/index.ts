@@ -1,4 +1,4 @@
-import ProtractorPlugin from './protractor.plugin';
+import {ProtractorPlugin} from './protractor.plugin';
 import {Client} from '@ng-apimock/base-client';
 
 let plugin: ProtractorPlugin;

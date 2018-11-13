@@ -1,5 +1,5 @@
 import {assert, SinonStub, stub} from 'sinon';
-import ProtractorPlugin from './protractor.plugin';
+import {ProtractorPlugin} from './protractor.plugin';
 
 describe('ProtractorPlugin', () => {
     let browserGetFn: SinonStub;
