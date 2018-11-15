@@ -1,4 +1,4 @@
-# ng-apimock/protractor-plugin 
+# ng-apimock/protractor-plugin [![CircleCI](https://circleci.com/gh/ng-apimock/protractor-plugin.svg?style=svg)](https://circleci.com/gh/ng-apimock/protractor-plugin)  [![dependency Status](https://img.shields.io/david/ng-apimock/protractor-plugin.svg)](https://david-dm.org/ng-apimock/protractor-plugin) [![devDependency Status](https://img.shields.io/david/dev/ng-apimock/protractor-plugin.svg)](https://david-dm.org/ng-apimock/protractor-plugin#info=devDependencies)
 The protractor plugin for ng-apimock. 
 
 ### Usage
