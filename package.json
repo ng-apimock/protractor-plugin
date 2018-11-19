@@ -1,7 +1,7 @@
 {
   "name": "@ng-apimock/protractor-plugin",
   "description": "Protractor plugin for ng-apimock",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "homepage": "https://github.com/ng-apimock/protractor-plugin#readme",
   "author": {
     "name": "Mischa Dasberg",
@@ -41,13 +41,13 @@
     "angularjs"
   ],
   "devDependencies": {
-    "@ng-apimock/core": "1.0.14",
-    "@ng-apimock/test-application": "1.0.11",
+    "@ng-apimock/core": "1.0.15",
+    "@ng-apimock/test-application": "1.0.12",
     "@types/chai": "4.1.7",
     "@types/cucumber": "4.0.4",
     "@types/fs-extra": "5.0.4",
-    "@types/jasmine": "2.8.11",
-    "@types/sinon": "5.0.5",
+    "@types/jasmine": "3.3.0",
+    "@types/sinon": "5.0.6",
     "chai": "4.2.0",
     "connect": "3.6.6",
     "cucumber": "5.0.2",
