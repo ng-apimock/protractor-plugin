@@ -1,7 +1,7 @@
 {
   "name": "@ng-apimock/protractor-plugin",
   "description": "Protractor plugin for ng-apimock",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "homepage": "https://github.com/ng-apimock/protractor-plugin#readme",
   "author": {
     "name": "Mischa Dasberg",
