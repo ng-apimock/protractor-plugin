@@ -38,7 +38,7 @@ Sets the delay time in milliseconds for the mock. This makes sure the response i
 ##### echoRequest(name: string, echo: boolean): Promise<any>; 
 Sets the indicator which enables / disables the request logging.
 
-##### setVariable(key: string, value: string): Promise<any>;
+##### setVariable(key: string, value: any): Promise<any>;
 Adds or updates the global variable.
     
 ##### setVariables(variables: {[key: string]: any;}): Promise<any>;
