@@ -1,6 +1,12 @@
 # ng-apimock/protractor-plugin [![CircleCI](https://circleci.com/gh/ng-apimock/protractor-plugin.svg?style=svg)](https://circleci.com/gh/ng-apimock/protractor-plugin)  [![dependency Status](https://img.shields.io/david/ng-apimock/protractor-plugin.svg)](https://david-dm.org/ng-apimock/protractor-plugin) [![devDependency Status](https://img.shields.io/david/dev/ng-apimock/protractor-plugin.svg)](https://david-dm.org/ng-apimock/protractor-plugin#info=devDependencies)
 The protractor plugin for ng-apimock. 
 
+## Getting Started
+
+```shell
+npm install @ng-apimock/protractor-plugin --save-dev
+```
+
 ### Usage
 This plugin connects to ng-apimock and makes the plugin functions available within the tests.
 
@@ -11,7 +17,7 @@ exports.config = {
     plugins: [{
         package: '@ng-apimock/protractor-plugin',
         options: {
-            globalName: 'ngApimockProtractorPlugin' // optional option (defaults to ngApimock)
+            globalName: 'ngApimock' // optional option (defaults to ngApimock)
         }
     }]
 };
@@ -53,5 +59,5 @@ Resets all the mocks to the default state.
 ##### setMocksToPassThrough(): Promise<any>;
 Sets all the mocks to pass through.
 
-##### setPreset(name: string): Promise<any>;
-Sets the mocks and variables in the selected state.
+##### selectPreset(name: string): Promise<any>;
+Selects the mocks and variables in the selected state.
