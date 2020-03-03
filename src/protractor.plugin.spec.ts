@@ -10,7 +10,7 @@ describe('ProtractorPlugin', () => {
     let resolveFn: SinonStub;
     let rejectFn: SinonStub;
 
-    beforeAll(() => {
+    beforeEach(() => {
         browserGetProcessedConfigThenFn = stub();
         browserGetFn = stub();
         browserManageAddCookieFn = stub();
@@ -46,15 +46,17 @@ describe('ProtractorPlugin', () => {
         });
     });
 
-    describe('openUrl', () =>
+    describe('openUrl', () => {
         it('opens the url', async () => {
             await plugin.openUrl('url');
             assert.calledWith(browserGetFn, 'url');
-        }));
+        });
+    });
 
-    describe('setCookie', () =>
+    describe('setCookie', () => {
         it('sets the cookie', async () => {
             await plugin.setCookie('name', 'value');
-            assert.calledWith(browserManageAddCookieFn, { name: 'name', value: 'value' });
-        }));
+            assert.calledWith(browserManageAddCookieFn, {name: 'name', value: 'value'});
+        });
+    });
 });
