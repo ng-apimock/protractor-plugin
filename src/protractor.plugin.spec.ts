@@ -1,4 +1,4 @@
-import {ProtractorPlugin} from './protractor.plugin';
+import { ProtractorPlugin } from './protractor.plugin';
 
 describe('ProtractorPlugin', () => {
     let browserGetFn: jest.Mock;
@@ -34,14 +34,13 @@ describe('ProtractorPlugin', () => {
     });
 
     describe('constructor', () => {
-        it('sets the baseUrl', () =>
-            expect(plugin.baseUrl).toBe(`${'http://localhost:9000'}/ngapimock`));
+        it('sets the baseUrl', () => expect(plugin.baseUrl).toBe(`${'http://localhost:9000'}/ngapimock`));
     });
 
     describe('constructor custom Url', () => {
         it('sets the baseUrl', () => {
             plugin = new ProtractorPlugin('http://newUrl:3000');
-            expect(plugin.baseUrl).toBe(`http://newUrl:3000/ngapimock`);
+            expect(plugin.baseUrl).toBe('http://newUrl:3000/ngapimock');
         });
     });
 
@@ -55,7 +54,7 @@ describe('ProtractorPlugin', () => {
     describe('setCookie', () => {
         it('sets the cookie', async () => {
             await plugin.setCookie('name', 'value');
-            expect(browserManageAddCookieFn).toHaveBeenCalledWith({name: 'name', value: 'value'});
+            expect(browserManageAddCookieFn).toHaveBeenCalledWith({ name: 'name', value: 'value' });
         });
     });
 });

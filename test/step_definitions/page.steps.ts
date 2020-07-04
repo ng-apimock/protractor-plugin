@@ -1,11 +1,14 @@
-import {Before, Given, Then, When} from 'cucumber';
-import {expect} from 'chai';
-import {browser} from 'protractor';
-
-import * as fs from 'fs-extra';
 import * as path from 'path';
 
-import {PagePO} from '../pos/page.po';
+import {
+    Before, Given, Then, When
+} from 'cucumber';
+import * as fs from 'fs-extra';
+import { browser } from 'protractor';
+
+import { PagePO } from '../pos/page.po';
+
+const expect = require('jest-matchers');
 
 const mocksDirectory = path.join(require.resolve('@ng-apimock/test-application'), '..', 'mocks');
 let responses: any;
@@ -21,81 +24,58 @@ Before(async () => {
     responses.postItem['passThrough'] = { status: 200, data: ['passThrough'] };
 });
 
-Given(/^I open the test page/, openTestPage);
+Given(/^I open the test page/, async () => {
+    await PagePO.open();
+});
 
-When(/^I download the binary file$/, downloadTheBinaryFile);
-When(/^I enter (.*) and post the item$/, enterAndPostItem);
-When(/^I get the items$/, getTheItems);
-When(/^I get the items as jsonp$/, getTheItemsAsJsonp);
-
-Then(/^the items are fetched$/, checkItemsAreFetched);
-Then(/^the items are not yet fetched$/, checkItemsAreNotYetFetched);
-Then(/^the response is interpolated with variable (.*)$/, checkResponseIsInterpolatedWithVariable);
-Then(/^the (.*) response is returned for get items$/, checkReturnedResponseForGetItems);
-Then(/^the (.*) response is returned for post item$/, checkReturnedResponseForPostItem);
-Then(/^the (.*) response is downloaded$/, checkResponseIsDownloaded);
-
-async function checkItemsAreFetched(): Promise<any> {
-    await browser.waitForAngularEnabled(true);
-    expect(await PagePO.done.getText()).to.equal('true');
-}
-
-async function checkItemsAreNotYetFetched(): Promise<any> {
-    expect(await PagePO.done.getText()).to.equal('false');
-}
-
-async function checkResponseIsDownloaded(scenario: string): Promise<any> {
-    await browser.wait(() => {
-        if (fs.existsSync(browser.params.default_directory + '/test.pdf')) {
-            const actual = fs.readFileSync(browser.params.default_directory + '/test.pdf');
-            const expected = fs.readFileSync(path.join(mocksDirectory, responses.getItems[scenario].file));
-            return actual.equals(expected);
-        } else {
-            return browser.params.environment === 'CI'
-        }
-    }, 5000);
-}
-
-async function checkResponseIsInterpolatedWithVariable(variable: string): Promise<any> {
-    expect(await PagePO.data.getText()).to.contain(variable);
-}
-
-async function checkReturnedResponseForGetItems(scenario: string): Promise<any> {
-    if (responses.getItems[scenario].data !== undefined) {
-        const data = await PagePO.data.getText();
-        expect(JSON.parse(data)).to.deep.equal(responses.getItems[scenario].data);
-    }
-    const status = await PagePO.status.getText();
-    expect(parseInt(status)).to.equal(responses.getItems[scenario].status);
-}
-
-async function checkReturnedResponseForPostItem(scenario: string): Promise<any> {
-    if (responses.postItem[scenario].data !== undefined) {
-        const data = await PagePO.data.getText();
-        expect(JSON.parse(data)).to.deep.equal(responses.postItem[scenario].data)
-    }
-    const status = await PagePO.status.getText();
-    expect(parseInt(status)).to.equal(responses.postItem[scenario].status);
-}
-
-async function downloadTheBinaryFile(): Promise<any> {
+When(/^I download the binary file$/, async () => {
     await PagePO.buttons.binary.click();
-}
-
-async function enterAndPostItem(data: string): Promise<any> {
+});
+When(/^I enter (.*) and post the item$/, async (data: string) => {
     await PagePO.input.clear();
     await PagePO.input.sendKeys(data);
     await PagePO.buttons.post.click();
-}
-
-async function getTheItems(): Promise<any> {
+});
+When(/^I get the items$/, async () => {
     await PagePO.buttons.get.click();
-}
-
-async function getTheItemsAsJsonp(): Promise<any> {
+});
+When(/^I get the items as jsonp$/, async () => {
     await PagePO.buttons.getAsJsonp.click();
-}
+});
 
-async function openTestPage(): Promise<any> {
-    await PagePO.open();
-}
+Then(/^the items are fetched$/, async () => {
+    await browser.waitForAngularEnabled(true);
+    expect(await PagePO.done.getText()).toEqual('true');
+});
+Then(/^the items are not yet fetched$/, async () => {
+    expect(await PagePO.done.getText()).toEqual('false');
+});
+Then(/^the response is interpolated with variable (.*)$/, async (variable: string) => {
+    expect(await PagePO.data.getText()).toContain(variable);
+});
+Then(/^the (.*) response is returned for get items$/, async (scenario: string) => {
+    if (responses.getItems[scenario].data !== undefined) {
+        const data = await PagePO.data.getText();
+        expect(JSON.parse(data)).toEqual(responses.getItems[scenario].data);
+    }
+    const status = await PagePO.status.getText();
+    expect(parseInt(status)).toEqual(responses.getItems[scenario].status);
+});
+Then(/^the (.*) response is returned for post item$/, async (scenario: string) => {
+    if (responses.postItem[scenario].data !== undefined) {
+        const data = await PagePO.data.getText();
+        expect(JSON.parse(data)).toEqual(responses.postItem[scenario].data);
+    }
+    const status = await PagePO.status.getText();
+    expect(parseInt(status)).toEqual(responses.postItem[scenario].status);
+});
+Then(/^the (.*) response is downloaded$/, async (scenario: string) => {
+    await browser.wait(() => {
+        if (fs.existsSync(`${browser.params.default_directory}/test.pdf`)) {
+            const actual = fs.readFileSync(`${browser.params.default_directory}/test.pdf`);
+            const expected = fs.readFileSync(path.join(mocksDirectory, responses.getItems[scenario].file));
+            return actual.equals(expected);
+        }
+        return browser.params.environment === 'CI';
+    }, 5000);
+});

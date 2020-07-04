@@ -1,4 +1,6 @@
-import {$, browser, by, element} from 'protractor';
+import { $, browser } from 'protractor';
+
+import { PageButtons } from './page-buttons.po';
 
 export class PagePO {
     static get data() {
@@ -14,7 +16,7 @@ export class PagePO {
     }
 
     static get input() {
-        return $("#item");
+        return $('#item');
     }
 
     static get buttons() {
@@ -23,23 +25,5 @@ export class PagePO {
 
     static async open(): Promise<any> {
         await browser.get('/index.html');
-    }
-}
-
-export class PageButtons {
-    get get() {
-        return element(by.buttonText('get'));
-    }
-
-    get binary() {
-        return element(by.buttonText('binary'));
-    }
-
-    get getAsJsonp() {
-        return element(by.buttonText('get as jsonp'));
-    }
-
-    get post() {
-        return element(by.buttonText('post'));
     }
 }
