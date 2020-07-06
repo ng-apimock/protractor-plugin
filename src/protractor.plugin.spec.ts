@@ -1,19 +1,18 @@
-import {assert, SinonStub, stub} from 'sinon';
-import {ProtractorPlugin} from './protractor.plugin';
+import { ProtractorPlugin } from './protractor.plugin';
 
 describe('ProtractorPlugin', () => {
-    let browserGetFn: SinonStub;
+    let browserGetFn: jest.Mock;
     let browserGetProcessedConfigThenFn: any;
-    let browserManageAddCookieFn: SinonStub;
+    let browserManageAddCookieFn: jest.Mock;
     let plugin: ProtractorPlugin;
     let deferredPromise: any;
-    let resolveFn: SinonStub;
-    let rejectFn: SinonStub;
+    let resolveFn: jest.Mock;
+    let rejectFn: jest.Mock;
 
     beforeEach(() => {
-        browserGetProcessedConfigThenFn = stub();
-        browserGetFn = stub();
-        browserManageAddCookieFn = stub();
+        browserGetProcessedConfigThenFn = jest.fn();
+        browserGetFn = jest.fn();
+        browserManageAddCookieFn = jest.fn();
         deferredPromise = {};
 
         (global as any)['protractor'] = {
@@ -28,35 +27,34 @@ describe('ProtractorPlugin', () => {
             },
         };
 
-        rejectFn = stub();
-        resolveFn = stub();
+        rejectFn = jest.fn();
+        resolveFn = jest.fn();
 
         plugin = new ProtractorPlugin();
     });
 
     describe('constructor', () => {
-        it('sets the baseUrl', () =>
-            expect(plugin.baseUrl).toBe(`${'http://localhost:9000'}/ngapimock`));
+        it('sets the baseUrl', () => expect(plugin.baseUrl).toBe(`${'http://localhost:9000'}/ngapimock`));
     });
 
     describe('constructor custom Url', () => {
         it('sets the baseUrl', () => {
             plugin = new ProtractorPlugin('http://newUrl:3000');
-            expect(plugin.baseUrl).toBe(`http://newUrl:3000/ngapimock`);
+            expect(plugin.baseUrl).toBe('http://newUrl:3000/ngapimock');
         });
     });
 
     describe('openUrl', () => {
         it('opens the url', async () => {
             await plugin.openUrl('url');
-            assert.calledWith(browserGetFn, 'url');
+            expect(browserGetFn).toHaveBeenCalledWith('url');
         });
     });
 
     describe('setCookie', () => {
         it('sets the cookie', async () => {
             await plugin.setCookie('name', 'value');
-            assert.calledWith(browserManageAddCookieFn, {name: 'name', value: 'value'});
+            expect(browserManageAddCookieFn).toHaveBeenCalledWith({ name: 'name', value: 'value' });
         });
     });
 });

@@ -1,4 +1,5 @@
 const path = require('path');
+
 let server;
 
 exports.config = {
@@ -17,11 +18,13 @@ exports.config = {
         }
     }],
     beforeLaunch: () => {
-        const child_process = require('child_process');
-        const path = require('path');
-        server = child_process.spawn('node',
+        const childProcess = require('child_process');
+        server = childProcess.spawn('node',
             [path.join(__dirname, 'server.js')],
-            {cwd: __dirname, stdio: 'inherit'});
+            {
+                cwd: __dirname,
+                stdio: 'inherit'
+            });
         process.on('exit', () => server.kill());
     },
     afterLaunch: () => {
@@ -31,7 +34,10 @@ exports.config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
-        requireModule: require('ts-node').register({ project: path.posix.join(process.cwd(), 'test', 'tsconfig.e2e.json') }),
+        requireModule: require('ts-node')
+            .register({
+                project: path.posix.join(process.cwd(), 'test', 'tsconfig.e2e.json')
+            }),
         require: [
             path.join(__dirname, 'step_definitions', '*.steps.ts'),
             path.join(__dirname, 'cucumber.helper.ts')

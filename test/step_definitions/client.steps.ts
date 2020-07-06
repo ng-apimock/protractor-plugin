@@ -1,70 +1,49 @@
-import {After, Given, When} from 'cucumber';
-import {expect} from 'chai';
-import {browser} from 'protractor';
+import { Client } from '@ng-apimock/base-client';
+import { After, Given, When } from 'cucumber';
+import { browser } from 'protractor';
 
-import {Client} from '@ng-apimock/base-client';
+const expect = require('jest-matchers');
 
 declare const client: Client;
 
-Given(/^the following mocks state:$/, checkMocksState);
-Given(/^the following variables state:$/, checkVariablesState);
-When(/^I add variable (.*) with value (.*)/, addVariable);
-When(/^I delete variable (.*)/, deleteVariable);
-When(/^I reset the mocks to default$/, resetMocksToDefault);
-When(/^I select scenario (.*) for mock (.*)$/, selectScenario);
-When(/^I set delay to (\d+) for mock (.*)$/, delayResponse);
-When(/^I set the mocks to passThroughs$/, setMocksToPassThrough);
-When(/^I update variable (.*) with value (.*)/, updateVariable);
-When(/^I wait a (\d+) milliseconds$/, waitSeconds);
-When(/^I select the preset (.*)/, selectPreset);
-
-After(async () => await client.resetMocksToDefault());
-
-async function addVariable(key: string, value: string): Promise<void> {
-    await client.setVariable(key, value);
-}
-
-async function checkMocksState(dataTable: { rows: Function }): Promise<void> {
+Given(/^the following mocks state:$/, async (dataTable: { rows: Function }) => {
     const mocks: any = await client.getMocks();
     dataTable.rows()
-        .forEach((row: any) => expect(mocks.state[row[0]].scenario).to.equal(row[1]));
-}
-
-async function checkVariablesState(dataTable: { rows: Function }): Promise<void> {
+        .forEach((row: any) => expect(mocks.state[row[0]].scenario).toEqual(row[1]));
+});
+Given(/^the following variables state:$/, async (dataTable: { rows: Function }) => {
     const variables = await client.getVariables();
     dataTable.rows()
-        .forEach((row: any) => expect(variables.state[row[0]]).to.equal(row[1]));
-}
+        .forEach((row: any) => expect(variables.state[row[0]]).toEqual(row[1]));
+});
 
-async function delayResponse(delay: string, name: string): Promise<void> {
-    await browser.waitForAngularEnabled(false);
-    await client.delayResponse(name, parseInt(delay))
-}
-
-async function deleteVariable(key: string): Promise<void> {
-    await client.deleteVariable(key);
-}
-
-async function resetMocksToDefault(): Promise<void> {
-    await client.resetMocksToDefault();
-}
-
-async function selectScenario(scenario: string, name: string): Promise<void> {
-    await client.selectScenario(name, scenario);
-}
-
-async function selectPreset(name: string): Promise<void> {
-    await client.selectPreset(name);
-}
-
-async function setMocksToPassThrough(): Promise<void> {
-    await client.setMocksToPassThrough();
-}
-
-async function updateVariable(key: string, value: string): Promise<void> {
+When(/^I add variable (.*) with value (.*)/, async (key: string, value: string) => {
     await client.setVariable(key, value);
-}
+});
+When(/^I delete variable (.*)/, async (key: string) => {
+    await client.deleteVariable(key);
+});
+When(/^I reset the mocks to default$/, async () => {
+    await client.resetMocksToDefault();
+});
+When(/^I select scenario (.*) for mock (.*)$/, async (scenario: string, name: string) => {
+    await client.selectScenario(name, scenario);
+});
+When(/^I set delay to (\d+) for mock (.*)$/, async (delay: string, name: string) => {
+    await browser.waitForAngularEnabled(false);
+    await client.delayResponse(name, parseInt(delay));
+});
+When(/^I set the mocks to passThroughs$/, async () => {
+    await client.setMocksToPassThrough();
+});
+When(/^I update variable (.*) with value (.*)/, async (key: string, value: string) => {
+    await client.setVariable(key, value);
+});
+When(/^I wait a (\d+) milliseconds$/, async (wait: number) => {
+    await browser.sleep(wait);
+});
+When(/^I select the preset (.*)/, async (name: string) => {
+    await client.selectPreset(name);
+});
 
-async function waitSeconds(wait: number): Promise<void> {
-    await browser.sleep(wait)
-}
+After(async () => await client.resetMocksToDefault());

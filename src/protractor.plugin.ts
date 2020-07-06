@@ -1,9 +1,9 @@
-import {browser} from 'protractor';
-import {BaseClient} from '@ng-apimock/base-client';
+import { BaseClient } from '@ng-apimock/base-client';
+import { browser } from 'protractor';
 
 /** Protractor plugin for ng-apimock. */
 export class ProtractorPlugin extends BaseClient {
-    /** Constructor.*/
+    /** Constructor. */
     constructor(baseUrl?: string) {
         super(baseUrl || browser.baseUrl);
     }
@@ -15,6 +15,6 @@ export class ProtractorPlugin extends BaseClient {
 
     /** {@inheritDoc}. */
     async setCookie(name: string, value: string): Promise<any> {
-        return await (browser.manage() as any).addCookie({ name: name, value: value });
+        return await (browser.manage() as any).addCookie({ name, value });
     }
 }
