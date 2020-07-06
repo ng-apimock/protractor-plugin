@@ -8,7 +8,11 @@ jest.config.js
 
 # configs
 tsconfig.json
-tslint.json
+.eslintrc
+.releaserc
+jest.config.js
+commitlint.config.js
+sonar-project.properties
 
 # idea
 .idea
@@ -16,3 +20,6 @@ tslint.json
 
 # ci
 .circleci
+
+# integration tests
+coverage
