@@ -19,7 +19,7 @@ sonar-project.properties
 *.iml
 
 # ci
-.circleci
+.github
 
 # integration tests
 coverage
