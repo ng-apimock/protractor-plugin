@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/ng-apimock/protractor-plugin/compare/v1.0.19...v1.1.0) (2020-07-08)
+
+
+### Features
+
+* 🎸 make endpoints base path configurable ([9a9cd21](https://github.com/ng-apimock/protractor-plugin/commit/9a9cd21fd23e9ad5f6b55c9f6a6856340cde548e)), closes [#15](https://github.com/ng-apimock/protractor-plugin/issues/15)
+
 ## [1.0.19](https://github.com/ng-apimock/protractor-plugin/compare/v1.0.18...v1.0.19) (2020-07-06)
 
 
