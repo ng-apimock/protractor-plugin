@@ -1,3 +1,5 @@
+import { browser } from 'protractor';
+
 import { ProtractorPlugin } from './protractor.plugin';
 
 describe('ProtractorPlugin', () => {
@@ -30,17 +32,17 @@ describe('ProtractorPlugin', () => {
         rejectFn = jest.fn();
         resolveFn = jest.fn();
 
-        plugin = new ProtractorPlugin();
+        plugin = new ProtractorPlugin({ baseUrl: browser.baseUrl });
     });
 
     describe('constructor', () => {
         it('sets the baseUrl', () => expect(plugin.baseUrl).toBe(`${'http://localhost:9000'}/ngapimock`));
     });
 
-    describe('constructor custom Url', () => {
+    describe('constructor custom path', () => {
         it('sets the baseUrl', () => {
-            plugin = new ProtractorPlugin('http://newUrl:3000');
-            expect(plugin.baseUrl).toBe('http://newUrl:3000/ngapimock');
+            plugin = new ProtractorPlugin({ baseUrl: browser.baseUrl, basePath: 'myapimock' });
+            expect(plugin.baseUrl).toBe('http://localhost:9000/myapimock');
         });
     });
 

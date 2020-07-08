@@ -1,11 +1,11 @@
-import { BaseClient } from '@ng-apimock/base-client';
+import { BaseClient, Configuration } from '@ng-apimock/base-client';
 import { browser } from 'protractor';
 
 /** Protractor plugin for ng-apimock. */
 export class ProtractorPlugin extends BaseClient {
     /** Constructor. */
-    constructor(baseUrl?: string) {
-        super(baseUrl || browser.baseUrl);
+    constructor(configuration: Configuration) {
+        super(configuration);
     }
 
     /** {@inheritDoc}. */
