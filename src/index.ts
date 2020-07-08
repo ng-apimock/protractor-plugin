@@ -1,4 +1,5 @@
 import { Client } from '@ng-apimock/base-client';
+import { browser } from 'protractor';
 
 import { ProtractorPlugin } from './protractor.plugin';
 
@@ -21,11 +22,14 @@ async function onPrepare() {
  * @return {Promise<void>} promise The promise.
  */
 async function setup() {
-    const baseUrl = (this.config.options && this.config.options.baseUrl)
-        ? this.config.options.baseUrl
-        : undefined;
-
-    plugin = new ProtractorPlugin(baseUrl);
+    plugin = new ProtractorPlugin({
+        baseUrl: (this.config.options && this.config.options.baseUrl)
+            ? this.config.options.baseUrl
+            : browser.baseUrl,
+        basePath: (this.config.options && this.config.options.basePath)
+            ? this.config.options.basePath
+            : undefined
+    });
     await plugin.setNgApimockCookie();
 }
 
