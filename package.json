@@ -79,7 +79,7 @@
     "wait-on": "5.0.3"
   },
   "dependencies": {
-    "@ng-apimock/base-client": "2.0.0"
+    "@ng-apimock/base-client": "2.0.1"
   },
   "peerDependencies": {
     "protractor": ">=6.x"
