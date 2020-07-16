@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/v/@ng-apimock/protractor-plugin?color=brightgreen)](https://www.npmjs.com/package/@ng-apimock/protractor-plugin) <br />
+[![npm](https://img.shields.io/npm/v/@ng-apimock/protractor-plugin?color=brightgreen)](https://www.npmjs.com/package/@ng-apimock/protractor-plugin) [![Build Status](https://github.com/ng-apimock/protractor-plugin/workflows/CI/badge.svg)](https://github.com/ng-apimock/protractor-plugin/actions?workflow=CI) <br />
 [@ng-apimock/protractor-plugin](https://github.com/ng-apimock/protractor-plugin) is the [protractor](https://www.protractortest.org/#/) plugin for [@ng-apimock/core](https://github.com/ng-apimock/core).
 
 This plugin connects to [@ng-apimock/core](https://github.com/ng-apimock/core) middelware and makes the all its features available in the tests.
