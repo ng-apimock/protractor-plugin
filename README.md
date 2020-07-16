@@ -10,4 +10,4 @@ protractor plugin for @ng-apimock/core
  
 [gettingStarted]: https://ngapimock.org/docs/plugins/protractor-plugin
 [api]: https://ngapimock.org/docs/api/select-scenario
-[changelog]: https://github.com/ng-apimock/protractor/blob/master/CHANGELOG.md
+[changelog]: https://github.com/ng-apimock/protractor-plugin/blob/master/CHANGELOG.md
