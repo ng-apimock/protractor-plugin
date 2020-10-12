@@ -65,7 +65,7 @@
     "eslint-plugin-jest": "24.1.0",
     "fs-extra": "9.0.1",
     "husky": "4.3.0",
-    "jest": "26.5.2",
+    "jest": "26.5.3",
     "jest-matchers": "20.0.3",
     "lint-staged": "10.4.0",
     "protractor": "7.0.0",
