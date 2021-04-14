@@ -2,6 +2,7 @@ const path = require('path');
 
 const apimock = require('@ng-apimock/core');
 const connect = require('connect');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const serveStatic = require('serve-static');
 
 const app = connect();
@@ -11,15 +12,16 @@ apimock.processor.process({ src: mocksDirectory });
 app.use(apimock.middleware);
 app.use('/', serveStatic(path.join(require('@ng-apimock/test-application'))));
 
-app.use('/items', (request, response, next) => {
-    response.writeHead(200, { 'Content-Type': 'application/json' });
-    if (request.method === 'GET') {
-        response.end('["passThrough"]');
-    } else if (request.method === 'POST') {
-        response.end('["passThrough"]');
-    } else {
-        next();
-    }
-});
+app.use('/orgs/ng-apimock', createProxyMiddleware({
+    target: 'https://api.github.com',
+    changeOrigin: true,
+    timeout: 5000,
+}));
+
+app.use('/ng-apimock', createProxyMiddleware({
+    target: 'https://raw.githubusercontent.com',
+    changeOrigin: true
+}));
+
 app.listen(9999);
 console.log('ng-apimock-angular-test-app is running on port 9999');

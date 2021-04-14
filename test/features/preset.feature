@@ -7,21 +7,23 @@ Feature: Select preset
 
   Background:
     Given the following mocks state:
-      | name      | scenario          |
-      | get items | crypto-currencies |
-      | post item | ok                |
+      | name              | scenario |
+      | get repositories  | ok       |
+      | create repository | ok       |
+      | readme            | ok       |
     And the following variables state:
       | key | value |
 
-    # Verify after selecting a preset
-
+  # When selecting a preset the following things will be tested:
+  # - select scenario
+  # - set variable
   Scenario: Select a preset
-    Given I open the test page
+    Given I open the page
     When I select the preset happy
     Then the following mocks state:
-      | name      | scenario         |
-      | get items | crypto-exchanges |
-      | post item | nok              |
+      | name              | scenario     |
+      | get repositories  | dummy        |
+      | create repository | unauthorized |
     And the following variables state:
-      | key      | value   |
-      | coinName | my coin |
+      | key               | value             |
+      | dummy-description | dummy description |
