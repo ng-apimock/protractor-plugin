@@ -85,7 +85,7 @@
     "@ng-apimock/base-client": "2.0.2"
   },
   "peerDependencies": {
-    "protractor": ">=7.x"
+    "protractor": ">=6.x"
   },
   "lint-staged": {
     "**/**.{ts}": [
