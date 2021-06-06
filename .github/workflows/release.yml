@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
           node-version: 12
@@ -17,7 +19,7 @@ jobs:
       - name: install
         run: yarn install --frozen-lockfile
       - name: build
-        run: yarn run compile
+        run: yarn compile
       - name: publish
         run: yarn semantic-release
         env:
