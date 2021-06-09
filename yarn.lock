@@ -1201,18 +1201,18 @@
     lodash "^4.17.4"
     read-pkg-up "^7.0.0"
 
-"@serenity-js/assertions@2.29.0":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@serenity-js/assertions/-/assertions-2.29.0.tgz#286b990c36e4461231775406f4f09291a01c71b9"
-  integrity sha512-IStw1L5ZArkKi2ubbMmLugIY/E3S0dYzjWFSPKiUoumA8/DJpGzThKw/ILo2XQh7xoqdoomQex9bXfUKikQbAQ==
+"@serenity-js/assertions@2.29.1":
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/assertions/-/assertions-2.29.1.tgz#8e998313cb9d59e8fe865059dbca9e5e73ad04ba"
+  integrity sha512-t8+dSZrhnBUwTkzwtA9pfqPTQE94A3Wu6RNIJsvcnVqir0e6HPX95QFoEIr/q+agz8EqrVAfRT2YYg0X6iTphQ==
   dependencies:
-    "@serenity-js/core" "2.29.0"
+    "@serenity-js/core" "2.29.1"
     tiny-types "^1.16.1"
 
-"@serenity-js/core@2.29.0", "@serenity-js/core@^2.28.1":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@serenity-js/core/-/core-2.29.0.tgz#91e15a9c377bf851f5be3a0d3149d1924fed8403"
-  integrity sha512-AsiyO0JYl1D2jEeSY4F9tdat9Fc1lOxN4i5xPB4cBBjgG7dTKjNIGTDWxG3uRgN7FZ+QWS5E3VpKt66i/FFeYA==
+"@serenity-js/core@2.29.1", "@serenity-js/core@^2.29.1":
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/core/-/core-2.29.1.tgz#8e27c02ffe13009aa88161506f52cdf2a52411be"
+  integrity sha512-VHC36fUYZIn++ERlXgC6OQCBuySeqFbE0BcELfizSRyBOGSNCmr6eVs3wEIfszVlU943KFFDFi9uGmXuQnqPAA==
   dependencies:
     cuid "^2.1.8"
     diff "^5.0.0"
@@ -1225,24 +1225,24 @@
     tiny-types "^1.16.1"
     upath "^2.0.1"
 
-"@serenity-js/cucumber@^2.28.1":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@serenity-js/cucumber/-/cucumber-2.29.0.tgz#afafd8c4776e96c77aacca1cdc64cb8c40e5993e"
-  integrity sha512-ILrTwnBt1HKxH9UJAhYDtoYIkVixtNzUEnwt6/kfNZ4w8tcmkwbJTpst7BrUP6L3i1ICLwYoml8Xf50uNHvu2Q==
+"@serenity-js/cucumber@^2.29.1":
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/cucumber/-/cucumber-2.29.1.tgz#51a11867c395204c74b82299ad79eb712040570b"
+  integrity sha512-3tTG4P1Hyyz4LCYeXx6rqc0uy4NetIXFgd4PqCpJ42jlRwaoWW/dM0G9fdGhhEEuhrhaojywRMAJeS+wSO7avQ==
   dependencies:
     "@cucumber/messages" "^15.0.0"
-    "@serenity-js/core" "2.29.0"
+    "@serenity-js/core" "2.29.1"
     cli-table3 "^0.6.0"
     gherkin "5.1.0"
     tiny-types "^1.16.1"
 
-"@serenity-js/protractor@^2.28.1":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@serenity-js/protractor/-/protractor-2.29.0.tgz#b89c2404e8030e2128867961e0152fbbab5353f2"
-  integrity sha512-DvsBXqoKk8HXnzgLBDomRWaN481hBWkLjzmgy8iUEmcBSGfAi+GKNtgZmueO1kIcvoUsf3MUpqeDsnOO9jWbDw==
+"@serenity-js/protractor@^2.29.1":
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/protractor/-/protractor-2.29.1.tgz#a81a4fb5ed552d76c1c9a5c962a4362e7460e498"
+  integrity sha512-WYYYqnQSpJl2Du8CZBt2X1ytQa3FGCujbou7prd80IqgcQoBt+HbHu1Szihxvvd8uxo+nS3CuzPG1cIBqqH2jA==
   dependencies:
-    "@serenity-js/assertions" "2.29.0"
-    "@serenity-js/core" "2.29.0"
+    "@serenity-js/assertions" "2.29.1"
+    "@serenity-js/core" "2.29.1"
     deepmerge "^4.2.2"
     is-plain-object "^5.0.0"
     tiny-types "^1.16.1"
@@ -6807,14 +6807,14 @@ protobufjs@^6.10.2:
     "@types/node" ">=13.7.0"
     long "^4.0.0"
 
-protractor-cucumber-framework@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/protractor-cucumber-framework/-/protractor-cucumber-framework-8.1.0.tgz#b4b1f803ef3ac44488cf5bb990650864108d346b"
-  integrity sha512-0UNwD00fX3eadU3unqqRrIMQodvcdS8r4Nhyaz0Y7cZoDTgPPceO9JDiJdf9FdzHc0zhfgcknFN9rQHzkccVeQ==
+protractor-cucumber-framework@8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/protractor-cucumber-framework/-/protractor-cucumber-framework-8.1.1.tgz#3fa58dc4767f2751a8840c7b017b35b011c4aa71"
+  integrity sha512-O4ks0Y+lrlmVvHKA54ZCF3QY2V6kgG1LzymqGltHJABUCj70Vk4j17qqr0ZFVzhD1ZP9pKy7komROiKrChpXxw==
   dependencies:
-    "@serenity-js/core" "^2.28.1"
-    "@serenity-js/cucumber" "^2.28.1"
-    "@serenity-js/protractor" "^2.28.1"
+    "@serenity-js/core" "^2.29.1"
+    "@serenity-js/cucumber" "^2.29.1"
+    "@serenity-js/protractor" "^2.29.1"
 
 protractor@7.0.0:
   version "7.0.0"
