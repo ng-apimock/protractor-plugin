@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ng-apimock/protractor-plugin/compare/v1.1.0...v2.0.0) (2021-07-27)
+
+
+### Features
+
+* 🎸 test protractor support for create-preset ([332ca6e](https://github.com/ng-apimock/protractor-plugin/commit/332ca6eb67163c05c1e0a06efb9fbb55121c0938))
+
+
+### BREAKING CHANGES
+
+* 🧨 update to v3.*
+
 # [1.1.0](https://github.com/ng-apimock/protractor-plugin/compare/v1.0.19...v1.1.0) (2020-07-08)
 
 
