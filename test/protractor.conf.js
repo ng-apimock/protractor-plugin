@@ -34,7 +34,7 @@ exports.config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
-        requireModule: 'ts-node/register',
+        compiler: require('ts-node').register({}),
         require: [
             path.join(__dirname, 'step_definitions', '*.steps.ts'),
             path.join(__dirname, 'cucumber.helper.ts')
