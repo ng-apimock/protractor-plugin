@@ -70,7 +70,7 @@
     "husky": "7.0.1",
     "jest": "27.0.6",
     "jest-matchers": "20.0.3",
-    "lint-staged": "11.1.1",
+    "lint-staged": "11.1.2",
     "protractor": "7.0.0",
     "protractor-cucumber-framework": "8.2.2",
     "rimraf": "3.0.2",
