@@ -55,7 +55,7 @@
     "@semantic-release/release-notes-generator": "9.0.3",
     "@types/cucumber": "6.0.1",
     "@types/fs-extra": "9.0.12",
-    "@types/jest": "26.0.24",
+    "@types/jest": "27.0.0",
     "@typescript-eslint/eslint-plugin": "4.28.5",
     "@typescript-eslint/parser": "4.28.5",
     "commitizen": "4.2.4",
