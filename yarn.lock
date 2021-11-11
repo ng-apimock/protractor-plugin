@@ -742,10 +742,10 @@
     reflect-metadata "0.1.13"
     uuid "8.3.2"
 
-"@ng-apimock/test-application@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@ng-apimock/test-application/-/test-application-3.1.0.tgz#278d08b45408b282bcf69824efeee5da04a84c72"
-  integrity sha512-OSdIgPjRZ+x+VGMpk5uoyvg/C7HliHI0qmpBUlDoi7VJitj0St8/VBGuiJHL0C8+reXRP3DV9jBrIxshL7PWGA==
+"@ng-apimock/test-application@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@ng-apimock/test-application/-/test-application-3.2.0.tgz#175a553badfea38f42181f95302b1cdccd37623d"
+  integrity sha512-VljsH2GO75fZl90s+uMDZ9GRNVIu4qz7liYzsYJe4xCleXjipTDKsLYbmMm5ubIKAeXp5UYEOOeD+1vXrpTXUg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

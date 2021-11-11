@@ -46,7 +46,7 @@
     "@commitlint/cli": "14.1.0",
     "@commitlint/config-conventional": "14.1.0",
     "@ng-apimock/core": "3.3.0",
-    "@ng-apimock/test-application": "3.1.0",
+    "@ng-apimock/test-application": "3.2.0",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/commit-analyzer": "9.0.1",
     "@semantic-release/git": "10.0.1",
