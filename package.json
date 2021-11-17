@@ -43,7 +43,7 @@
     "angularjs"
   ],
   "devDependencies": {
-    "@commitlint/cli": "14.1.0",
+    "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "14.1.0",
     "@ng-apimock/core": "3.3.0",
     "@ng-apimock/test-application": "3.1.0",
