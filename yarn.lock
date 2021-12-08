@@ -1189,18 +1189,18 @@
     lodash "^4.17.4"
     read-pkg-up "^7.0.0"
 
-"@serenity-js/assertions@2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/assertions/-/assertions-2.32.4.tgz#e561ac992bf6b3167e95da525f042ec17fc10713"
-  integrity sha512-Vy+RKqoBOyTVe+M256Xyq2zLRMxX0QATN0PWDMkDGDPl4hRcN0vlmNNFPXp19ZOQ0bUTwL8ZnD5aEZpnXJ/UKA==
+"@serenity-js/assertions@2.32.5":
+  version "2.32.5"
+  resolved "https://registry.yarnpkg.com/@serenity-js/assertions/-/assertions-2.32.5.tgz#4e23ad6fb59a73887cc21a8fc5c8665a1e0ccb64"
+  integrity sha512-TJu1CWm5ax4NwpL4ud4vrRs9MyDLzSgmlrz1m2mtOe5jAVfOWa6CCNcV5hFxHRqO/f5WAz+R2Xa5xOeojyRn8Q==
   dependencies:
-    "@serenity-js/core" "2.32.4"
+    "@serenity-js/core" "2.32.5"
     tiny-types "^1.16.1"
 
-"@serenity-js/core@2.32.4", "@serenity-js/core@^2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/core/-/core-2.32.4.tgz#028993567400a5b329f0d3bc8b8b6f7a1bd3404c"
-  integrity sha512-+K8ss6bVVA9fOoKVWFqxYQxGtVxO5s5CF1mO78QxnUrduwUmYBxXHVSsn6waME5uR50lsLQvFDXy3Be+3CVKwQ==
+"@serenity-js/core@2.32.5", "@serenity-js/core@^2.32.5":
+  version "2.32.5"
+  resolved "https://registry.yarnpkg.com/@serenity-js/core/-/core-2.32.5.tgz#00cab425b5da583a5c3aa637b78952dc8f4477fe"
+  integrity sha512-+uhc30yrtksTcVYs1DmPtEBH0cWhIQ1F/NOKUEk/uE9bzTUjn0XNd+TVVro5HyuZf+XiYISS8Vfid6Lbrh/eEw==
   dependencies:
     cuid "^2.1.8"
     diff "^5.0.0"
@@ -1213,24 +1213,24 @@
     tiny-types "^1.16.1"
     upath "^2.0.1"
 
-"@serenity-js/cucumber@^2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/cucumber/-/cucumber-2.32.4.tgz#d1ec97e648cb9b9d1cf57dc1e3339467b8f3035c"
-  integrity sha512-MGQg6fuJT3HaQHiaiNiNI7QV3pvZ7xaneNX/eUyqUgsaxdtdOopMxVQeGawwBwthHW/EAgqi1TRBnSPH2YcepA==
+"@serenity-js/cucumber@^2.32.5":
+  version "2.32.5"
+  resolved "https://registry.yarnpkg.com/@serenity-js/cucumber/-/cucumber-2.32.5.tgz#9f6fb6ec3727d51f477ffb5b232e8acaa0761b5b"
+  integrity sha512-I0Htr6JKp2UGqYxPBo+soDBtRr2ceNjBPf7q+/gyjVp7FJ0J4W4/n5wNlgXFzpkKe5vUM71e04CAbEPy5wc0xg==
   dependencies:
     "@cucumber/messages" "^16.0.1"
-    "@serenity-js/core" "2.32.4"
+    "@serenity-js/core" "2.32.5"
     cli-table3 "^0.6.0"
     gherkin "5.1.0"
     tiny-types "^1.16.1"
 
-"@serenity-js/protractor@^2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/protractor/-/protractor-2.32.4.tgz#06ecc1b88a8006f231397c4263793f3fcd710814"
-  integrity sha512-pbyaupPsdd3u0NK3rBK6Fs7B1n5xiteKI1vyw/eJ1cDYZGVOdSfJre4wYI05vM+dyMUqzVP/DpIgXGvQhxnZ0Q==
+"@serenity-js/protractor@^2.32.5":
+  version "2.32.5"
+  resolved "https://registry.yarnpkg.com/@serenity-js/protractor/-/protractor-2.32.5.tgz#fee87e5051d841344c216ac86b3ce0411e4f9c57"
+  integrity sha512-9g3nKD1uhtOxoGEH6NVmMCqXWE8kI/MNc7ZjsQCYJYBshzGujRDQ68dWw+CwztU+MV63AluYk6KclV2FaWCyHA==
   dependencies:
-    "@serenity-js/assertions" "2.32.4"
-    "@serenity-js/core" "2.32.4"
+    "@serenity-js/assertions" "2.32.5"
+    "@serenity-js/core" "2.32.5"
     deepmerge "^4.2.2"
     is-plain-object "^5.0.0"
     tiny-types "^1.16.1"
@@ -7009,14 +7009,14 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-protractor-cucumber-framework@8.2.8:
-  version "8.2.8"
-  resolved "https://registry.yarnpkg.com/protractor-cucumber-framework/-/protractor-cucumber-framework-8.2.8.tgz#05e87a123d65f77a574cc2dbf10d2b15a2492c02"
-  integrity sha512-8a2Dnx8wVxy/lPxLSbvj2sXliwJBMg0Z9N0TGTWesbkmj5F+u5MMdURRxKQfU+9waL9hv7Rxk8X42kuioMTt0g==
+protractor-cucumber-framework@8.2.9:
+  version "8.2.9"
+  resolved "https://registry.yarnpkg.com/protractor-cucumber-framework/-/protractor-cucumber-framework-8.2.9.tgz#2e2a4bb2abb68820cd50b98bf7bf9a544a0fd93a"
+  integrity sha512-YJMNEcK3pvfmlnDTYGMYOR2G2mfbQFfU+dPLvv8NxkCI4F6Mtg4En40AORJxXD7BNIi8bNNcT/I2kWMllqaIvw==
   dependencies:
-    "@serenity-js/core" "^2.32.4"
-    "@serenity-js/cucumber" "^2.32.4"
-    "@serenity-js/protractor" "^2.32.4"
+    "@serenity-js/core" "^2.32.5"
+    "@serenity-js/cucumber" "^2.32.5"
+    "@serenity-js/protractor" "^2.32.5"
 
 protractor@7.0.0:
   version "7.0.0"
