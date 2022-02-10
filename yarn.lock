@@ -1189,51 +1189,52 @@
     lodash "^4.17.4"
     read-pkg-up "^7.0.0"
 
-"@serenity-js/assertions@2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/assertions/-/assertions-2.32.4.tgz#e561ac992bf6b3167e95da525f042ec17fc10713"
-  integrity sha512-Vy+RKqoBOyTVe+M256Xyq2zLRMxX0QATN0PWDMkDGDPl4hRcN0vlmNNFPXp19ZOQ0bUTwL8ZnD5aEZpnXJ/UKA==
+"@serenity-js/assertions@2.33.1":
+  version "2.33.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/assertions/-/assertions-2.33.1.tgz#5fc167972cdc4bd31d84c9faabf924932c856a48"
+  integrity sha512-ZIJ9RPcpQ6Z02+JMqiAjHdX/TvPPXfJcoTbau8LhBjXc6N9LTZq0A5Yh9p4bRQarx3U/BQlwFA9Z/wv8MZ6hJQ==
   dependencies:
-    "@serenity-js/core" "2.32.4"
-    tiny-types "^1.16.1"
+    "@serenity-js/core" "2.33.1"
+    tiny-types "^1.17.0"
 
-"@serenity-js/core@2.32.4", "@serenity-js/core@^2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/core/-/core-2.32.4.tgz#028993567400a5b329f0d3bc8b8b6f7a1bd3404c"
-  integrity sha512-+K8ss6bVVA9fOoKVWFqxYQxGtVxO5s5CF1mO78QxnUrduwUmYBxXHVSsn6waME5uR50lsLQvFDXy3Be+3CVKwQ==
+"@serenity-js/core@2.33.1", "@serenity-js/core@^2.33.1":
+  version "2.33.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/core/-/core-2.33.1.tgz#8ae83bad7e5abfdc489fbf983fb2b0be29598685"
+  integrity sha512-arXv1rUyhRIDj0H0FFokfGMXkdPhBjiXAZYGVOzAvxcM8hjcKOObQQ8Kh8L2whTEzP0PdzCKqScDzUxO/Ln5hw==
   dependencies:
     cuid "^2.1.8"
     diff "^5.0.0"
     error-stack-parser "^2.0.6"
-    fast-glob "^3.2.7"
+    fast-glob "^3.2.11"
     filenamify "^4.3.0"
-    graceful-fs "^4.2.8"
+    graceful-fs "^4.2.9"
     moment "^2.29.1"
     semver "^7.3.5"
-    tiny-types "^1.16.1"
+    tiny-types "^1.17.0"
     upath "^2.0.1"
 
-"@serenity-js/cucumber@^2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/cucumber/-/cucumber-2.32.4.tgz#d1ec97e648cb9b9d1cf57dc1e3339467b8f3035c"
-  integrity sha512-MGQg6fuJT3HaQHiaiNiNI7QV3pvZ7xaneNX/eUyqUgsaxdtdOopMxVQeGawwBwthHW/EAgqi1TRBnSPH2YcepA==
+"@serenity-js/cucumber@^2.33.1":
+  version "2.33.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/cucumber/-/cucumber-2.33.1.tgz#25cd55bb7559271592613bcc6fde6aa875e6822b"
+  integrity sha512-GvIziieaMkzjVXk/y7RpyXfFHWkUjjdo+ZoJF/EDor203WsJ+eu0ZizSBiRQk+rbR3+SkRmVn9buf2ewIC4pjw==
   dependencies:
     "@cucumber/messages" "^16.0.1"
-    "@serenity-js/core" "2.32.4"
-    cli-table3 "^0.6.0"
+    "@serenity-js/core" "2.33.1"
+    cli-table3 "^0.6.1"
+    colors "1.4.0"
     gherkin "5.1.0"
-    tiny-types "^1.16.1"
+    tiny-types "^1.17.0"
 
-"@serenity-js/protractor@^2.32.4":
-  version "2.32.4"
-  resolved "https://registry.yarnpkg.com/@serenity-js/protractor/-/protractor-2.32.4.tgz#06ecc1b88a8006f231397c4263793f3fcd710814"
-  integrity sha512-pbyaupPsdd3u0NK3rBK6Fs7B1n5xiteKI1vyw/eJ1cDYZGVOdSfJre4wYI05vM+dyMUqzVP/DpIgXGvQhxnZ0Q==
+"@serenity-js/protractor@^2.33.1":
+  version "2.33.1"
+  resolved "https://registry.yarnpkg.com/@serenity-js/protractor/-/protractor-2.33.1.tgz#52cce49bd5d72cc345d118c6a577a29de5ad54fd"
+  integrity sha512-pdl5+X+izhhfhIkXrEmy5HnRtm1fDeWQS+klmKjgCHLyoowMnEdVKOC0KTMFiOkp7HFthmN3eXGLgZSccUVmZw==
   dependencies:
-    "@serenity-js/assertions" "2.32.4"
-    "@serenity-js/core" "2.32.4"
+    "@serenity-js/assertions" "2.33.1"
+    "@serenity-js/core" "2.33.1"
     deepmerge "^4.2.2"
     is-plain-object "^5.0.0"
-    tiny-types "^1.16.1"
+    tiny-types "^1.17.0"
 
 "@sideway/address@^4.1.0":
   version "4.1.2"
@@ -2388,6 +2389,15 @@ cli-table3@^0.6.0:
   optionalDependencies:
     colors "^1.1.2"
 
+cli-table3@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/cli-table3/-/cli-table3-0.6.1.tgz#36ce9b7af4847f288d3cdd081fbd09bf7bd237b8"
+  integrity sha512-w0q/enDHhPLq44ovMGdQeeDLvwxwavsJX7oQGYt/LrBlYsyaxyDnp6z3QzFut/6kLLKnlcUVJLrpB7KBfgG/RA==
+  dependencies:
+    string-width "^4.2.0"
+  optionalDependencies:
+    colors "1.4.0"
+
 cli-truncate@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-truncate/-/cli-truncate-2.1.0.tgz#c39e28bf05edcde5be3b98992a22deed5a2b93c7"
@@ -2488,7 +2498,7 @@ colorette@^2.0.16:
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.16.tgz#713b9af84fdb000139f04546bd4a93f62a5085da"
   integrity sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==
 
-colors@^1.1.2:
+colors@1.4.0, colors@^1.1.2:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
@@ -3567,10 +3577,21 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-glob@^3.1.1, fast-glob@^3.2.7:
+fast-glob@^3.1.1:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.7.tgz#fd6cb7a2d7e9aa7a7846111e85a196d6b2f766a1"
   integrity sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==
+  dependencies:
+    "@nodelib/fs.stat" "^2.0.2"
+    "@nodelib/fs.walk" "^1.2.3"
+    glob-parent "^5.1.2"
+    merge2 "^1.3.0"
+    micromatch "^4.0.4"
+
+fast-glob@^3.2.11:
+  version "3.2.11"
+  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.11.tgz#a1172ad95ceb8a16e20caa5c5e56480e5129c1d9"
+  integrity sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"
@@ -4088,6 +4109,11 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.3, 
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
+
+graceful-fs@^4.2.9:
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
+  integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
 
 handlebars@^4.7.6:
   version "4.7.7"
@@ -7009,14 +7035,14 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-protractor-cucumber-framework@8.2.8:
-  version "8.2.8"
-  resolved "https://registry.yarnpkg.com/protractor-cucumber-framework/-/protractor-cucumber-framework-8.2.8.tgz#05e87a123d65f77a574cc2dbf10d2b15a2492c02"
-  integrity sha512-8a2Dnx8wVxy/lPxLSbvj2sXliwJBMg0Z9N0TGTWesbkmj5F+u5MMdURRxKQfU+9waL9hv7Rxk8X42kuioMTt0g==
+protractor-cucumber-framework@8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/protractor-cucumber-framework/-/protractor-cucumber-framework-8.3.1.tgz#ec9f23e2cb06a551b361c375dfd0abe880f6e325"
+  integrity sha512-5kuAGHyzZLMC+S/MZqoLdcZQeFQwUoSUk2sfapCTW/+WnjcA4UlW1gQe8279rfpVThm1rK4LqKEZ4svs1CL7rg==
   dependencies:
-    "@serenity-js/core" "^2.32.4"
-    "@serenity-js/cucumber" "^2.32.4"
-    "@serenity-js/protractor" "^2.32.4"
+    "@serenity-js/core" "^2.33.1"
+    "@serenity-js/cucumber" "^2.33.1"
+    "@serenity-js/protractor" "^2.33.1"
 
 protractor@7.0.0:
   version "7.0.0"
@@ -8174,10 +8200,10 @@ tiny-relative-date@^1.3.0:
   resolved "https://registry.yarnpkg.com/tiny-relative-date/-/tiny-relative-date-1.3.0.tgz#fa08aad501ed730f31cc043181d995c39a935e07"
   integrity sha512-MOQHpzllWxDCHHaDno30hhLfbouoYlOI8YlMNtvKe1zXbjEVhbcEovQxvZrPvtiYW630GQDoMMarCnjfyfHA+A==
 
-tiny-types@^1.16.1:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/tiny-types/-/tiny-types-1.16.1.tgz#5ea18637ac47678f820249c22f871ebc66d83ad9"
-  integrity sha512-CLNYYZF6Q0VyDhJ5c5u75Y2SHWhHZBvdLm/P23RLyYzB/yBIWG52lLAomObC3IOlufA1ubl4eLfp9PZU/1U6Jg==
+tiny-types@^1.17.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/tiny-types/-/tiny-types-1.17.0.tgz#436eaa6723c50ef44b756bc9a4d5f87fcb594ea3"
+  integrity sha512-7/shUEpt89npYPrKa4pl+PCBCbd3/moVv0tFgnm6TrETMK3WpHJQaAxNMMi5T834Nm6mKfzQNPRkpnIML53bkA==
 
 title-case@^2.1.1:
   version "2.1.1"
