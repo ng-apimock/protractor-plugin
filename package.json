@@ -72,7 +72,7 @@
     "jest-matchers": "20.0.3",
     "lint-staged": "12.1.2",
     "protractor": "7.0.0",
-    "protractor-cucumber-framework": "8.2.8",
+    "protractor-cucumber-framework": "8.4.2",
     "rimraf": "3.0.2",
     "semantic-release": "18.0.1",
     "ts-jest": "27.0.7",
