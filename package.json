@@ -16,6 +16,7 @@
     "lint:fix": "npm run lint -- --fix",
     "lint-staged": "lint-staged",
     "test": "jest --config=jest.config.js -w 1",
+    "preprotractor-local": "rm -rf test/.ngapimock",
     "protractor-local": "protractor test/protractor.local.conf.js",
     "protractor-ci": "protractor test/protractor.ci.conf.js",
     "sauce:download": "curl https://saucelabs.com/downloads/sc-4.6.2-linux.tar.gz --output sc-4.6.2-linux.tar.gz",
