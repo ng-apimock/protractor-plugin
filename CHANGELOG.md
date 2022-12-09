@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/ng-apimock/protractor-plugin/compare/v2.0.0...v2.1.0) (2022-12-09)
+
+
+### Features
+
+* 🎸 update base-client ([7444f57](https://github.com/ng-apimock/protractor-plugin/commit/7444f5758e9ab8993b5dc88effd41807f10ddd55))
+* 🎸 update to latest base-client ([6b377d5](https://github.com/ng-apimock/protractor-plugin/commit/6b377d5490d3fd00a61f7034da413f84b060eb97))
+
 # [2.0.0](https://github.com/ng-apimock/protractor-plugin/compare/v1.1.0...v2.0.0) (2021-07-27)
 
 
