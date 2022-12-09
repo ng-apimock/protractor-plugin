@@ -62,6 +62,6 @@ export class PagePO {
     }
 
     static error() {
-        return $('.mat-dialog-title');
+        return $('.mat-mdc-dialog-title');
     }
 }
