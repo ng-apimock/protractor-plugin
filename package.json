@@ -57,7 +57,7 @@
     "@types/cucumber": "6.0.1",
     "@types/fs-extra": "9.0.13",
     "@types/jest": "29.2.4",
-    "@typescript-eslint/eslint-plugin": "5.46.0",
+    "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.46.0",
     "commitizen": "4.2.6",
     "cucumber": "6.0.7",
