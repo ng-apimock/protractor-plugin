@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/ng-apimock/protractor-plugin/compare/v2.1.0...v2.1.1) (2023-01-15)
+
+
+### Bug Fixes
+
+* 🐛 security fix for fetch dependency ([81d6d90](https://github.com/ng-apimock/protractor-plugin/commit/81d6d904555952cdbf591a676f830d86e4ae2319))
+
 # [2.1.0](https://github.com/ng-apimock/protractor-plugin/compare/v2.0.0...v2.1.0) (2022-12-09)
 
 
