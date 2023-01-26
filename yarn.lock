@@ -810,10 +810,10 @@
     url-join "4.0.1"
     uuid "9.0.0"
 
-"@ng-apimock/core@3.6.1":
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/@ng-apimock/core/-/core-3.6.1.tgz#78a4e13360b6f54a006bdeedb21cbcd9c5ebde7e"
-  integrity sha512-DMScuNzbcCWZ98qmYayHLn/mRxlv0PE2uBg4mTXQfl/t2ZtFzxUuw+qM6kmg3Svo44n62pGJhCL5cz8vuwSqYA==
+"@ng-apimock/core@3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@ng-apimock/core/-/core-3.7.0.tgz#2fcb77871ae93cadb7c28199ae906f07dc650228"
+  integrity sha512-TSk9AezH0do3BnI1zTZSPQNGKT9kgOjQoVIjzelCS3RdK2HlY/OGRxPj+q8bUAVSrLhdas7c+yHpKLHOwdfDXw==
   dependencies:
     body-parser "1.20.1"
     chokidar "3.5.3"
